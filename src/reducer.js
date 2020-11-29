@@ -1,6 +1,7 @@
 import {combineReducers} from 'redux';
 const APPEND = "APPEND";
 const CALCULATE = "CALCULATE";
+const CLEAR = "CLEAR";
 
 const initialState = {
     expression: ""
@@ -22,6 +23,11 @@ function expressionReducer(state = initialState,action){
             return({
                 ...state,
                 expression: String(eval(state.expression))
+            });
+        case CLEAR:
+            return({
+                ...state,
+                expression: ""
             });
         default:
             return state;

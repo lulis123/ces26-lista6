@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {appendOperand,calculateExpression} from '../actions'
+import {appendOperand,calculateExpression,clearExpression} from '../actions'
 
 class CalculatorButton extends Component{
 
@@ -20,6 +20,9 @@ const mapDispatchToProps= (dispatch) => ({
     buttonClick: (inputValue) => {
         if(inputValue == "="){
             return dispatch(calculateExpression());
+        }
+        if(inputValue == "CE"){
+            return dispatch(clearExpression());
         }
         return dispatch(appendOperand(inputValue));
     }
