@@ -1,10 +1,13 @@
 import logo from './logo.svg';
+import { Components } from 'react';
 import './App.css';
 
-function App() {
-  return(
-    <h1>Teste</h1>
-  );
+class App extends Components {
+
+  render(){
+    return
+  }
+
 }
 
 export default App;
