@@ -7,7 +7,7 @@ class CalculatorButton extends Component{
     render(){
         return(
             <button
-                className = "calculateButton"
+                className = "calculatorButton"
                 onClick={()=>this.props.buttonClick(this.props.value)}    
             >
                 {this.props.value}
