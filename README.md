@@ -22,3 +22,4 @@ $ npm start
   - components: pasta onde estão as os componentes para a calculadora (calculator display e calculator button)
   - actions.js: arquivo com a definição das actions para o redux
   - reducers.js: arquivo com os reducers para o o redux
+  - App.js: aplciatiov principal da calculadora, que é renderizado dentro do index.html
