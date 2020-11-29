@@ -1,11 +1,14 @@
 import logo from './logo.svg';
-import { Components } from 'react';
+import { Component } from 'react';
 import './App.css';
 
-class App extends Components {
+const mapStateToPros = state =>({expression:state.expression})
+const mapDispatchToProps = dispatch
+
+class App extends Component {
 
   render(){
-    return
+    
   }
 
 }
