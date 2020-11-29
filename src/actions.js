@@ -1,13 +1,16 @@
+const APPEND = "APPEND";
+const CALCULATE = "CALCULATE";
+
 export const appendOperand = (value)=>{
     return {
-        type: "append",
+        type: APPEND,
         payload: value
     };
 }
 
 export const calculateExpression = () => {
     return{
-        type: "calculate"
-    }
+        type: CALCULATE
+    };
 }
 

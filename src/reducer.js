@@ -1,29 +1,29 @@
+import {combineReducers} from 'redux';
+const APPEND = "APPEND";
+const CALCULATE = "CALCULATE";
 
-function calculator(state,action){
-    if (state == undefined){
-       return {
-           expression:"",
-           value:0
-        }; 
-    }
+const initialState = {
+    expression: "",
+    value: 0
+}
 
-    let expression = state.expression;
-    let value = state.value;
-
-    switch(action.type) {
-        case "append":
-            return {
-                expression: expression + action.payload,
-                value:value
-            };
-        case "calculate":
-            value = eval(expression);
+function expressionReducer(state = initialState,action){
+    switch(action.type){
+        case APPEND:
             return{
-                expresson: String(value),
-                value:value
+                ...state,
+                expression: expression + action.payload
             }
-        default:
-            return state;
-
+        case CALCULATE:
+            return{
+                ...state,
+                expression: String(eval(expression))
+            }
     }
 }
+
+const rootReducer = combineReducers({
+    expression: expressionReducer
+})
+
+export default rootReducer
