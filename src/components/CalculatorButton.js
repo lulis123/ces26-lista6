@@ -16,7 +16,7 @@ class CalculatorButton extends Component{
     }
 }
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps= (dispatch) => ({
     buttonClick: (inputValue) => {
         if(inputValue == "="){
             return dispatch(calculateExpression());
@@ -25,4 +25,4 @@ const mapDispatchToProps = (dispatch) => ({
     }
 })
 
-export default connect(mapStateToProps=null,mapDispatchToProps=mapDispatchToProps)(CalculatorButton)
+export default connect(null,mapDispatchToProps)(CalculatorButton)

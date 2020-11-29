@@ -3,22 +3,28 @@ const APPEND = "APPEND";
 const CALCULATE = "CALCULATE";
 
 const initialState = {
-    expression: "",
-    value: 0
+    expression: ""
 }
 
 function expressionReducer(state = initialState,action){
+    
+    if(state === undefined){
+        return initialState
+    }
+    
     switch(action.type){
         case APPEND:
-            return{
+            return({
                 ...state,
-                expression: expression + action.payload
-            }
+                expression: state.expression + action.payload
+            })
         case CALCULATE:
-            return{
+            return({
                 ...state,
-                expression: String(eval(expression))
-            }
+                expression: String(eval(state.expression))
+            });
+        default:
+            return state;
     }
 }
 

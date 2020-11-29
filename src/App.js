@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import { Component } from 'react';
 import CalculatorButton from './components/CalculatorButton';
 import CalculatorDisplay from './components/CalculatorDisplay';
